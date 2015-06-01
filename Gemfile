@@ -43,6 +43,4 @@ group :development, :test do
   gem 'spring'
 end
 
-group :production
-  gem 'rails_12factor'
-end
+

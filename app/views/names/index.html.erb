@@ -14,6 +14,7 @@
   <tbody>
     <% @names.each do |name| %>
       <tr>
+        <td><%= name.name %></td>
         <td><%= name.beginning_year %></td>
         <td><%= name.ending_year %></td>
         <td><%= link_to 'Show', name %></td>

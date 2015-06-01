@@ -69,6 +69,6 @@ class NamesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def name_params
-      params.require(:name).permit(:beginning_year, :ending_year)
+      params.require(:name).permit(:name, :beginning_year, :ending_year)
     end
 end

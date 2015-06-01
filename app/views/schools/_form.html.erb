@@ -1,18 +1,19 @@
-<%= form_for(@name) do |f| %>
-  <% if @name.errors.any? %>
+<%= form_for(@school) do |f| %>
+  <% if @school.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@name.errors.count, "error") %> prohibited this name from being saved:</h2>
+      <h2><%= pluralize(@school.errors.count, "error") %> prohibited this school from being saved:</h2>
 
       <ul>
-      <% @name.errors.full_messages.each do |message| %>
+      <% @school.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
+
   <div class="field">
     <%= f.label :name %><br>
-    <%= f.number_field :name %>
+    <%= f.text_area :name %>
   </div>
   <div class="field">
     <%= f.label :beginning_year %><br>

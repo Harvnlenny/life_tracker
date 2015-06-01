@@ -5,7 +5,6 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
       <th>Beginning year</th>
       <th>Ending year</th>
       <th colspan="3"></th>
@@ -15,7 +14,6 @@
   <tbody>
     <% @names.each do |name| %>
       <tr>
-        <td><%= name.name %></td>
         <td><%= name.beginning_year %></td>
         <td><%= name.ending_year %></td>
         <td><%= link_to 'Show', name %></td>

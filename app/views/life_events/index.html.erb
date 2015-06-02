@@ -15,6 +15,7 @@
   <tbody>
     <% @life_events.each do |life_event| %>
       <tr>
+        <td><%= life_event.person %></td>
         <td><%= life_event.title %></td>
         <td><%= life_event.year %></td>
         <td><%= life_event.description %></td>

@@ -18,7 +18,7 @@ class LifeEventsControllerTest < ActionController::TestCase
 
   test "should create life_event" do
     assert_difference('LifeEvent.count') do
-      post :create, life_event: { title: @life_event.title, year: @life_event.year }
+      post :create, life_event: { description: @life_event.description, title: @life_event.title, year: @life_event.year }
     end
 
     assert_redirected_to life_event_path(assigns(:life_event))
@@ -35,7 +35,7 @@ class LifeEventsControllerTest < ActionController::TestCase
   end
 
   test "should update life_event" do
-    patch :update, id: @life_event, life_event: { title: @life_event.title, year: @life_event.year }
+    patch :update, id: @life_event, life_event: { description: @life_event.description, title: @life_event.title, year: @life_event.year }
     assert_redirected_to life_event_path(assigns(:life_event))
   end
 

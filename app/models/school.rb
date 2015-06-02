@@ -1,3 +1,3 @@
 class School < ActiveRecord::Base
-  has_many :life_event
+  validates :ending_year, numericality: {greater_than_or_equal_to: beginning_year}
 end

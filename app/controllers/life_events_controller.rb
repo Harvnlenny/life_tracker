@@ -17,6 +17,8 @@ class LifeEventsController < ApplicationController
     @life_event = LifeEvent.new
   end
 
+
+
   # GET /life_events/1/edit
   def edit
   end

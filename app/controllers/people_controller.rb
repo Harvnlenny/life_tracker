@@ -2,7 +2,7 @@ class PeopleController < ApplicationController
   before_action :set_person, only: [:show, :edit, :update, :destroy]
 
   def index
-    @people = People.all
+    @person = Person.all
   end
 
   def show
@@ -11,7 +11,7 @@ class PeopleController < ApplicationController
   end
 
   def create
-    @person = Person.new(person_params)
+    @person = Person.create(person_params)
     redirect_to @person, notice: 'New Person Created'
   end
 
@@ -26,7 +26,7 @@ class PeopleController < ApplicationController
       @person = Person.find(params[:id])
     end
 
-    def school_params
+    def person_params
       params.require(:person).permit(:name)
     end
 end

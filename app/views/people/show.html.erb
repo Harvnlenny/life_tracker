@@ -7,7 +7,13 @@
 
 <ul>
   <% @person.schools.each do |school| %>
-    <li><%= school.name %>(<%= school.beginning_year %>
+    <li><%= school.name %> (<%= school.beginning_year %>
     - <%= school.ending_year %>)</li>
   <% end %>
+  <% @person.life_events.each do |life_event| %>
+    <li><%= life_event.title %>
+        <%= life_event.year %>
+    - <%= life_event.description %></li>
+  <% end %>
+
 </ul>

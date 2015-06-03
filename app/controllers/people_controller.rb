@@ -1,6 +1,10 @@
 class PeopleController < ApplicationController
   before_action :set_person, only: [:show, :edit, :update, :destroy]
 
+  def new
+    @person = Person.new
+  end
+
   def index
     @person = Person.all
   end

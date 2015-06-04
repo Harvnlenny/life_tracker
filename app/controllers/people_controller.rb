@@ -12,6 +12,7 @@ class PeopleController < ApplicationController
   def show
     @person.schools
     @person.life_events
+
   end
 
   def create

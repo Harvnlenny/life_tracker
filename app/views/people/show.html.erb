@@ -6,11 +6,11 @@
 </p>
 
 <ul>
-  <% @person.schools.each do |school| %>
+  <% @person.schools.order(:beginning_year).each do |school| %>
     <li><%= school.name %> (<%= school.beginning_year %>
     - <%= school.ending_year %>)</li>
   <% end %>
-  <% @person.life_events.each do |life_event| %>
+  <% @person.life_events.order(:year).each do |life_event| %>
     <li><%= life_event.title %>
         <%= life_event.year %>
     - <%= life_event.description %></li>

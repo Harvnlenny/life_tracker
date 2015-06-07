@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name</strong>
+  <strong><%= @person.name %></strong>
   <% @person.name %>
 </p>
 
 <ul>
   <% @person.schools.order(:beginning_year).each do |school| %>
-    <li><%= school.name %> (<%= school.beginning_year %>
+    <li> School  - <%= school.name %> (<%= school.beginning_year %>
     - <%= school.ending_year %>)</li>
   <% end %>
   <% @person.life_events.order(:year).each do |life_event| %>
